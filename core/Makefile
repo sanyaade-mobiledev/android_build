@@ -441,6 +441,8 @@ endif # TARGET_BOOTIMAGE_USE_EXT2
 
 endif # standard ANDROID bootimg (not uboot multiimage)
 
+include $(BUILD_SYSTEM)/kernel.mk
+
 else	# TARGET_NO_KERNEL
 # HACK: The top-level targets depend on the bootimage.  Not all targets
 # can produce a bootimage, though, and emulator targets need the ramdisk
